@@ -25,9 +25,8 @@ Core components include:
 
 - lif unit (membrane integration, leak, threshold, reset)
 - Synapse memory unit (weight storage and retrieval)
-- Synapse compute unit (spike-dependent weight contribution)
 - Neuron state storage
-- Control and scheduling logic
+
 
 
 ## Numeric Representation
