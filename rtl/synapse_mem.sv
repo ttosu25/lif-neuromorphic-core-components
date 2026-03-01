@@ -6,7 +6,7 @@ module synapse_mem #(parameter int N)
 (output logic signed [7:0] dout, input logic signed [7:0] din , input logic [$clog2(N)-1:0]addr, input logic we, clk);
 
 	//weights for memory
-	reg signed [7:0] weights[N-1:0]; 
+	logic signed [7:0] weights[N-1:0]; 
 	
 	always_ff@(posedge clk)
 	
