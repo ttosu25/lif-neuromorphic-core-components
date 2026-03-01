@@ -1,5 +1,5 @@
 
-module neuron_state #(parameter M) // M is the number of membranes
+module neuron_state #(parameter M) // M is the number of membranes and thus also the number of neurons
 (output logic signed [7:0] dout, input logic signed [7:0] din , input logic [$clog2(M)-1:0]addr, input logic we, clk);
 	
 	//membranes of each neuron
