@@ -23,7 +23,7 @@ The library enables the construction of neuron arrays, synapse memory systems, a
 
 Core components include:
 
-- Neuron unit (membrane integration, leak, threshold, reset)
+- lif unit (membrane integration, leak, threshold, reset)
 - Synapse memory unit (weight storage and retrieval)
 - Synapse compute unit (spike-dependent weight contribution)
 - Neuron state storage
