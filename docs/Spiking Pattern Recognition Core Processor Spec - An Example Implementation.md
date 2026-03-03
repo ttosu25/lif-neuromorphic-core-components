@@ -28,7 +28,7 @@ only when defined spike response conditions are met.
 # 3. Core Architecture
 
 Number of Neurons: N  
-Synapses per Neuron: Neuron  
+Synapses per Neuron: N
 
 
 # 4. Data width and Storage
