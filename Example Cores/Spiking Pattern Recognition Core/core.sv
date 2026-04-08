@@ -10,14 +10,14 @@ module core #(parameter WORD_LENGTH, NEURON_COUNT) //in this design its importan
 	logic [$clog2(NEURON_COUNT)-1:0] addr;
 	
 	//synapses buses
-	logic [WORD_LENGTH - 1:0] weights;
+	logic signed [WORD_LENGTH - 1:0] weights;
 	
 	//neuron buses
-	logic [WORD_LENGTH - 1: 0] mem_read;
-	logic [WORD_LENGTH - 1: 0] mem_write;
+	logic signed [WORD_LENGTH - 1: 0] mem_read;
+	logic signed [WORD_LENGTH - 1: 0] mem_write;
 	
 	// V_syn
-	logic [WORD_LENGTH - 1: 0] V_syn;
+	logic signed [WORD_LENGTH - 1: 0] V_syn;
 	
 	//lif buses
 	logic spiking; // spike event
@@ -47,9 +47,7 @@ module core #(parameter WORD_LENGTH, NEURON_COUNT) //in this design its importan
 		//setting default values
 		if(rst) begin
 		//1 bit signals
-			event_out <= '0;
-			spike_out <= '0; 
-			spiking <= '0;
+			event_out <= '0; 
 			
 		//LIF COMPUTATION PARAMETERS
 			threshold <= THRESH;
@@ -91,7 +89,8 @@ module core #(parameter WORD_LENGTH, NEURON_COUNT) //in this design its importan
 		.leak(leak),
 		.V_reset(V_reset),
 		.V_syn(V_syn),
-		.clk(clk)
+		.clk(clk),
+		.rst(rst)
 	);
 	
 	
