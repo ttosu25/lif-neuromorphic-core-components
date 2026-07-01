@@ -49,7 +49,7 @@ sim/ — simulation scripts
 ## Status
 
  modular component development in progress.
- dcoumentation in draft stage.
+ documentation in draft stage.
 
 ---
 
